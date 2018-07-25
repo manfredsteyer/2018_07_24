@@ -1,0 +1,1 @@
+export * from '../payment-customer-a/payment.module';

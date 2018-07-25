@@ -1,3 +1,4 @@
+import { PaymentModule } from './modules/payment';
 import { EffectsModule } from '@ngrx/effects';
 import { TabbedPaneModule } from './tabbed-pane/tabbed-pane.module';
 import { ConsoleAppenderService } from './../../../logger-lib/src/lib/console-appender.service';
@@ -31,7 +32,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   imports: [
     BrowserModule,
     HttpClientModule,
-    
+    PaymentModule,
     // FlightBookingModule, // Prevent Lazy Loading
     
     TabbedPaneModule,
@@ -49,7 +50,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     (!environment.production) ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([]),
     
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    //ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [
     AppComponent,

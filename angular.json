@@ -175,12 +175,25 @@
             "preserveSymlinks": true
           },
           "configurations": {
+            "customer-a": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/flight-app/src/app/modules/payment.ts",
+                  "with": "projects/flight-app/src/app/modules/payment-customer-a.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
                   "replace": "projects/flight-app/src/environments/environment.ts",
                   "with": "projects/flight-app/src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "projects/flight-app/src/app/modules/payment.ts",
+                  "with": "projects/flight-app/src/app/modules/payment-customer-a.ts"
                 }
+
               ],
               "optimization": true,
               "outputHashing": "all",
@@ -203,7 +216,11 @@
           "configurations": {
             "production": {
               "browserTarget": "flight-app:build:production"
+            },
+            "customer-a": {
+              "browserTarget": "flight-app:build:customer-a"
             }
+
           }
         },
         "extract-i18n": {
