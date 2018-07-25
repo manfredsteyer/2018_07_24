@@ -22,6 +22,13 @@
       ],
       "@my/logger-lib": [
         "projects/logger-lib/src/public_api"
+      ],
+      "payment-lib": [
+        "projects/payment-lib/src/public_api"
+        //"projects/payment-lib-customer-a/src/public_api"
+      ],
+      "payment-lib-customer-a": [
+        "projects/payment-lib-customer-a/src/public_api"
       ]
     }
   }
