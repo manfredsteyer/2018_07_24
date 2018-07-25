@@ -1,27 +1,43 @@
-# CliWorkspace
+# Überblick
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+```
+          APP
+           |
+           |
+           v
+    ====Facade==== <----- ersetzt ------ ====Facade'====                  
+       |    |                               |      |
+       v    |     \                  /      v      |
+    Module  |      <---- resuse -----     Module'  |
+     |      v     /                  \     |       v
+     |   Services                          |    Services'
+     |                                     |
+     v                                     v                              
+  Components                          Components
+```
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Regeln:
 
-## Code scaffolding
+  - App greift über Facade zu
+  - Substitut greift nicht über Facade zu, damit kein zyklischer Verweis entsteht
+  - Facade: ts-file mit export ... from ...
+    - Alternative: Module-Map
+  - Pro Modul eine eigene Facade
+  - Austausch über File-Mapping in tsconfig oder angular.json
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Beispiele
 
-## Build
+## Branch customize-module
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Austausch über tsconfig.json
 
-## Running unit tests
+## Branch customize-module
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Austausch über angular.json
+- Es gibt eine eigene Konfiguration customer-a
 
-## Running end-to-end tests
+Standard-Build: ng serve
+Alternativer Build: ng serve -c customer-a
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
