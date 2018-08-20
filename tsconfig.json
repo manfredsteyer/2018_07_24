@@ -23,12 +23,15 @@
       "@my/logger-lib": [
         "projects/logger-lib/src/public_api"
       ],
-      "payment-lib": [
+      "@flight-workspace/payment-lib": [
         "projects/payment-lib/src/public_api"
         //"projects/payment-lib-customer-a/src/public_api"
       ],
-      "payment-lib-customer-a": [
+      "@flight-workspace/payment-lib-customer-a": [
         "projects/payment-lib-customer-a/src/public_api"
+      ],
+      "@internal/payment-lib/*": [
+        "projects/payment-lib/src/lib/*"
       ]
     }
   }

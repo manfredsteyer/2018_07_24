@@ -1,4 +1,4 @@
-import { PaymentLibModule } from 'payment-lib';
+import { PaymentLibModule } from '@flight-workspace/payment-lib';
 import { EffectsModule } from '@ngrx/effects';
 import { TabbedPaneModule } from './tabbed-pane/tabbed-pane.module';
 import { ConsoleAppenderService } from './../../../logger-lib/src/lib/console-appender.service';
