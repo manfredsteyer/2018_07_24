@@ -24,8 +24,8 @@
         "projects/logger-lib/src/public_api"
       ],
       "@flight-workspace/payment-lib": [
-        "projects/payment-lib/src/public_api"
-        //"projects/payment-lib-customer-a/src/public_api"
+        // "projects/payment-lib/src/public_api"
+        "projects/payment-lib-customer-a/src/public_api"
       ],
       "@flight-workspace/payment-lib-customer-a": [
         "projects/payment-lib-customer-a/src/public_api"
